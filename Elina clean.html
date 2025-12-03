@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 🟦 TITRE POUR GOOGLE -->
+<title>Eline Clean | Nettoyage professionnel – Fin de chantier, bureaux, Airbnb, EHPAD, crèches</title>
+
+<!-- 🟦 DESCRIPTION SEO -->
+<meta name="description" content="Eline Clean : nettoyage professionnel de fin de chantier, bureaux, commerces, locations Airbnb, EHPAD, crèches et nettoyage de canapé. Service rapide, soigné et fiable.">
+
+<!-- 🟦 MOTS-CLÉS SEO -->
+<meta name="keywords" content="nettoyage, fin de chantier, nettoyage bureaux, airbnb, ménage pro, EHPAD, crèches, nettoyage canapé, Eline Clean">
+
+<!-- 🟦 OPEN GRAPH (Facebook, Instagram, WhatsApp) -->
+<meta property="og:title" content="Eline Clean – Nettoyage professionnel">
+<meta property="og:description" content="Services de nettoyage : fin de chantier, bureaux, Airbnb, EHPAD, crèches, canapé. Travail soigné, rapide et professionnel.">
+<meta property="og:image" content="Bckground.jfif">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ton-domaine.fr">
+
+<!-- 🟦 TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eline Clean – Nettoyage professionnel">
+<meta name="twitter:description" content="Fin de chantier, bureaux, Airbnb, crèches, EHPAD et canapé. Service rapide et professionnel.">
+<meta name="twitter:image" content="Bckground.jfif">
+
+<!-- 🟦 FAVICON (ton logo) -->
+<link rel="icon" href="Logo.jfif" type="image/jpeg">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* TON CSS (inchangé) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Montserrat', sans-serif; color: #222; scroll-behavior: smooth; }
+
+/* HEADER FIXE */
+header {
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(255,255,255,0.97);
+  border-bottom: 3px solid #0095f6;
+  display:flex; justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  z-index:1000;
+}
+
+/* LOGO */
+header h1 { font-size:1.4em; color:#0095f6; }
+
+/* MENU DESKTOP */
+nav { display:flex; gap:25px; }
+nav a { color:#222; font-weight:500; text-decoration:none; transition:0.3s; }
+nav a:hover { color:#007ad1; }
+
+/* HAMBURGER */
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.hamburger div { width:28px; height:3px; background:#0095f6; transition:0.3s; }
+
+/* MENU MOBILE */
+nav.mobile-active {
+  display:flex;
+  flex-direction:column;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100vh;
+  background:white;
+  padding-top:120px;
+  gap:30px;
+  text-align:center;
+  font-size:1.4em;
+  z-index:2000;
+}
+
+/* HERO */
+.hero {
+  margin-top:80px;
+  height:100vh;
+  background:url('Bckground.jfif') center/cover no-repeat;
+  display:flex; justify-content:center; align-items:center;
+  position:relative;
+  color:white; text-align:center;
+}
+.hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.35); }
+.hero-content { position:relative; z-index:1; max-width:700px; padding:0 20px; }
+.hero h2 { font-size:2.8em; }
+.hero p { margin-top:10px; font-size:1.2em; }
+.cta-button { display:inline-block; padding:12px 30px; margin-top:25px; background:#0095f6; color:white; font-weight:600; border-radius:50px; transition:0.3s; text-decoration:none; }
+.cta-button:hover { background:#007ad1; }
+
+/* SERVICES ICONS */
+.services-icons { text-align:center; padding:70px 20px; background:#f9f9f9; }
+.services-icons h2 { color:#0095f6; margin-bottom:50px; font-size:2em; }
+.icon-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:40px; }
+.icon-item { width:160px; padding:20px; border-radius:15px; background:white; box-shadow:0 5px 10px rgba(0,0,0,0.1); transition:0.3s; cursor:pointer; }
+.icon-item:hover { transform:translateY(-5px); }
+.icon-item img { width:60px; margin-bottom:12px; }
+.icon-item p { font-weight:500; }
+
+/* SERVICE SECTIONS */
+.service-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+.service-detail:nth-of-type(even) {
+  flex-direction: row-reverse;
+  background:#f9f9f9;
+}
+.service-detail img { flex:1; max-width:450px; width:100%; border-radius:12px; }
+.service-detail .text { flex:1; min-width:280px; }
+.service-detail h2 { color:#0095f6; margin-bottom:20px; font-size:2em; }
+.service-detail p { line-height:1.6; margin-bottom:20px; }
+.service-btn { display:inline-block; padding:10px 25px; background:#0095f6; color:white; font-weight:600; border-radius:50px; text-decoration:none; transition:0.3s; }
+.service-btn:hover { background:#007ad1; }
+
+/* CONTACT */
+.contact-form { padding:80px 20px; background:white; text-align:center; }
+.contact-form h2 { color:#0095f6; font-size:2em; margin-bottom:10px; }
+.contact-form p { margin-bottom:40px; }
+form { max-width:600px; margin:auto; text-align:left; }
+.form-group { margin-bottom:20px; }
+.form-group label { font-weight:600; color:#0095f6; display:block; margin-bottom:5px; }
+.form-group input, .form-group textarea { width:100%; padding:12px; border:2px solid #ddd; border-radius:10px; font-size:1em; }
+textarea { height:120px; resize:none; }
+
+/* FOOTER */
+footer { background:#111; color:#aaa; text-align:center; padding:25px 20px; }
+
+/* MOBILE */
+@media(max-width:900px) {
+  .hamburger { display:flex; }
+  header nav { display:none; }
+  .hero h2 { font-size:2.2em; }
+  .hero p { font-size:1.1em; }
+  .icon-grid { gap:25px; }
+  .icon-item { width:140px; }
+  .service-detail { flex-direction: column; text-align:center; padding:60px 20px; }
+  .service-detail img { max-width:100%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Eline Clean</h1>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services-icons">Services</a>
+    <a href="#contact">Demande</a>
+  </nav>
+  <div class="hamburger" onclick="toggleMenu()"><div></div><div></div><div></div></div>
+</header>
+
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    <h2>Eline Clean</h2>
+    <p>Spécialiste du nettoyage professionnel : fin de chantier, bureaux, commerces, Airbnb, EHPAD, crèches et remise des clés.</p>
+    <a href="#services-icons" class="cta-button">Découvrir nos services</a>
+  </div>
+</section>
+
+<section class="services-icons" id="services-icons">
+  <h2>Nos Services</h2>
+  <div class="icon-grid">
+    <div class="icon-item" onclick="scrollToSection('chantier')"><img src="chantier.png"><p>Fin de chantier</p></div>
+    <div class="icon-item" onclick="scrollToSection('bureaux')"><img src="nettoyage%20bureaux.png"><p>Bureaux & locaux</p></div>
+    <div class="icon-item" onclick="scrollToSection('airbnb')"><img src="airbnb.png"><p>Airbnb & locations</p></div>
+    <div class="icon-item" onclick="scrollToSection('ehpad')"><img src="ephd.png"><p>EHPAD</p></div>
+    <div class="icon-item" onclick="scrollToSection('creches')"><img src="cr%C3%A9ches.png"><p>Crèches</p></div>
+    <div class="icon-item" onclick="scrollToSection('canape')"><img src="canapé.png"><p>Nettoyage canapé</p></div>
+  </div>
+</section>
+
+<section class="service-detail" id="chantier">
+  <img src="Image de chantier.jpg" alt="Fin de chantier">
+  <div class="text">
+    <h2>Fin de chantier</h2>
+    <p>Le nettoyage de fin de chantier est une étape indispensable après la réalisation de travaux...</p>
+    <a href="#contact" class="service-btn">Faire une demande</a>
+  </div>
+</section>
+
+<section class="service-detail" id="bureaux">
+  <img src="image bureaux.jpg" alt="Bureaux & locaux">
+  <div class="text">
+    <h2>Bureaux & locaux</h2>
+    <p>Le nettoyage de bureaux et locaux consiste à maintenir des espaces de travail propres...</p>
+    <a href="#contact" class="service-btn">Faire une demande</a>
+  </div>
+</section>
+
+<section class="service-detail" id="airbnb">
+  <img src="Image airbnb.jpg" alt="Airbnb">
+  <div class="text">
+    <h2>Airbnb & locations</h2>
+    <p>Le nettoyage Airbnb et locations nécessite une intervention rapide, soignée...</p>
+    <a href="#contact" class="service-btn">Faire une demande</a>
+  </div>
+</section>
+
+<section class="service-detail" id="ehpad">
+  <img src="EPHD.jpg" alt="EHPAD">
+  <div class="text">
+    <h2>EHPAD</h2>
+    <p>Le nettoyage en EHPAD demande une attention particulière...</p>
+    <a href="#contact" class="service-btn">Faire une demande</a>
+  </div>
+</section>
+
+<section class="service-detail" id="creches">
+  <img src="ecole.jpg" alt="Crèches">
+  <div class="text">
+    <h2>Crèches</h2>
+    <p>Le nettoyage en crèches nécessite une hygiène irréprochable...</p>
+    <a href="#contact" class="service-btn">Faire une demande</a>
+  </div>
+</section>
+
+<section class="service-detail" id="canape">
+  <img src="Image canapé.jpg" alt="Nettoyage canapé">
+  <div class="text">
+    <h2>Nettoyage canapé</h2>
+    <p>Le nettoyage de canapé permet de redonner fraîcheur, propreté et confort...</p>
+    <a href="#contact" class="service-btn">Faire une demande</a>
+  </div>
+</section>
+
+<section class="contact-form" id="contact">
+  <h2>Faire une demande</h2>
+  <p>Envoyez-nous votre demande, nous vous répondrons rapidement.</p>
+  <form id="contactForm" action="https://formspree.io/f/mkgdrpok" method="POST">
+
+    <input type="text" name="_gotcha" style="display:none">
+
+    <div class="form-group">
+      <label>Email :</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Objet :</label>
+      <input type="text" name="objet" required>
+    </div>
+
+    <div class="form-group">
+      <label>Numéro de téléphone :</label>
+      <input type="text" name="telephone" required>
+    </div>
+
+    <div class="form-group">
+      <label>Message :</label>
+      <textarea name="message" required></textarea>
+    </div>
+
+    <button type="submit" class="cta-button">Envoyer</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Eline Clean — Tous droits réservés
+</footer>
+
+<script>
+// MENU MOBILE
+function toggleMenu() {
+  const nav = document.querySelector('header nav');
+  nav.classList.toggle('mobile-active');
+}
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('header nav').classList.remove('mobile-active');
+  });
+});
+
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+// FORMULAIRE SÉCURISÉ
+let startTime = Date.now();
+
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const email = document.querySelector("[name='email']").value.trim();
+  const tel = document.querySelector("[name='telephone']").value.trim();
+  const objet = document.querySelector("[name='objet']").value.trim();
+  const message = document.querySelector("[name='message']").value.toLowerCase();
+
+  if (Date.now() - startTime < 1500) {
+    alert("Veuillez patienter 2 secondes avant d’envoyer.");
+    return;
+  }
+
+  if (!email.includes("@") || !email.includes(".")) {
+    alert("Veuillez entrer un email valide.");
+    return;
+  }
+
+  if (!/^[0-9\s+()-]{8,}$/.test(tel)) {
+    alert("Veuillez entrer un numéro de téléphone valide.");
+    return;
+  }
+
+  const forbidden = ["http://", "https://", "www.", "viagra", "casino", "porn", "bitcoin", "crypto", "bank"];
+  for (let word of forbidden) {
+    if (message.includes(word)) {
+      alert("Votre message contient du texte non autorisé.");
+      return;
+    }
+  }
+
+  const formData = new FormData();
+  formData.append('email', email);
+  formData.append('objet', objet);
+  formData.append('telephone', tel);
+  formData.append('message', message);
+
+  fetch('https://formspree.io/f/mkgdrpok', {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("Merci ! Votre message a été envoyé.");
+      document.getElementById('contactForm').reset();
+    } else {
+      alert("Oups ! Une erreur est survenue, veuillez réessayer.");
+    }
+  })
+  .catch(() => {
+    alert("Oups ! Une erreur est survenue, veuillez réessayer.");
+  });
+});
+</script>
+
+</body>
+</html>
